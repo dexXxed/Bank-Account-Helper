@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<title>Форма для рекомендації Польського банку Українцям</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙏</text></svg>">
+
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div id="app">
+		<div class="container-contact100" v-if="submit">
+			<div class="wrap-contact100">
+				<form class="contact100-form validate-form">
+					<span class="contact100-form-title">
+						Please complete the form! <p style="font-size:39px">&#127468;&#127463;</p>
+
+						<br>Будь-ласка заповніть форму! <p style="font-size:39px">&#127482;&#127462;</p>
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Ім'я обов'язкове!">
+						<span class="label-input100">Your name (Ваше ім'я)</span>
+						<input class="input100" type="text" name="name" placeholder="Введіть Ваше ім'я!">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Прізвище обов'язкове!">
+						<span class="label-input100">Your second name (Ваше прізвище)</span>
+						<input class="input100" type="text" name="second_name" placeholder="Введіть Ваше прізвище!">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Ім'я по батькові обов'язкове!">
+						<span class="label-input100">Your middle name (Ваше ім'я по батькові)</span>
+						<input class="input100" type="text" name="third_name"
+							placeholder="Введіть Ваше ім'я по батькові!">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Необхідна дата народження!">
+						<span class="label-input100">Ваша дата народження</span>
+						<input class="input100" type="text" name="third_name" placeholder="РРРР-ММ-ДД">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input"
+						data-validate="Необхідний номер закордонного паспорту або ID-картки!">
+						<span class="label-input100">Номер закордонного паспорту або ID-картки</span>
+						<input class="input100" type="text" name="third_name" placeholder="AA123456 або 123456789">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Необхідний РНОКПП (ІПН)!">
+						<span class="label-input100">РНОКПП (ІПН)</span>
+						<input class="input100" type="text" name="third_name" placeholder="123456789">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Необхідний PESEL!">
+						<span class="label-input100">PESEL</span>
+						<input class="input100" type="text" name="third_name" placeholder="1234567890">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Необхідний Польський номер телефону!">
+						<span class="label-input100">Польський номер телефону</span>
+						<input class="input100" type="text" name="third_name" placeholder="+48516671635">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Необхідна Польська адреса проживання!">
+						<span class="label-input100">Польська адреса проживання</span>
+						<input class="input100" type="text" name="third_name"
+							placeholder="Aleja J. Ch. Szucha 7, 00-580 Warszawa, Poland">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Валідний email: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Введіть Вашу email адресу">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-contact100-form-btn mb-5">
+						<div class="wrap-contact100-form-btn">
+							<div class="contact100-form-bgbtn"></div>
+							<button class="contact100-form-btn" v-on:click="submit = false">
+								<span>
+									Submit / Підтвердити
+									<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+								</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="contact100-form validate-form">
+						<span class="contact100-form-title">
+							FAQ <p style="font-size:39px">&#127468;&#127463;</p>
+
+							<br>ЧаПи <p style="font-size:39px">&#127482;&#127462;</p>
+						</span>
+					</div>
+					<div>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:20px"><b>1. Чому ми потребуємо саме
+								цю
+								інформацію?</b></p>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:14px">Саме ця інформація є
+							обов'язковою
+							для
+							відкриття банківського рахунку в Польщі &#x1F1F5;&#x1F1F1;</p>
+						<br>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:20px"><b>2. Що таке PESEL?</b></p>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:14px">PESEL (Powszechny Elektroniczny
+							System
+							Ewidencji Ludności) — це номер загальної системи електронного обліку населення, іншими
+							словами
+							цифровий символ, що призначається фізичній особі та дозволяє ідентифікувати її. PESEL
+							налічує 11
+							цифр та містить інформацію про дату народження людини, її стать, порядковий номер та
+							контрольний
+							номер.</p>
+						<br>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:20px"><b>3. У мене немає інформації
+								по
+								обов'язковим полям форми. Що мені робити?</b></p>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:14px">Нажаль, всі обов'язкові поля
+							повинні
+							бути заповнені, бо цю інформацію у Вас буде вимагати Польський банк. Ми не зможемо Вам
+							гарантувати
+							відкриття рахунку(</p>
+						<br>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:20px"><b>4. Чому саме ці банки?</b>
+						</p>
+						<p style="font-family: 'Montserrat', sans-serif; font-size:14px">Ми співпрацюємо з цими банками
+							та
+							можемо гарантувати безпечне зберігання Ваших коштів 💸</p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+		<div class="container-contact100" v-else>
+			<div class="wrap-contact100">
+				<div class="contact100-form validate-form mb-1">
+					<span class="contact100-form-title">
+						Bank Credit Agricole
+						<br>
+						Рейтинг: 💶💶💶💶💶/5
+						<br>
+						Умови:
+					</span>
+					1️⃣0 зл. за обслуговування рахунку<br>
+					2️⃣0 зл. за мультивалютну картку<br>
+					3️⃣0 зл. за зняття коштів в усіх банкоматах на території Польщі<br>
+					4️⃣Вищезазначені три умови застосовуються, якщо щомісячні надходження на Ваш рахунок становитимуть
+					мінімум 1000 зл. та буде здійснено 1 платіж за допомогою картки, у т.ч. за допомогою Google Pay,
+					Apple
+					Pay, Garmin Pay, Fitbit Pay або BLIK.<br>
+					5️⃣0 зл. за перекази через Інтернет-банкінг та мобільний додаток<br>
+				</div>
+
+				<div class="container-contact100-form-btn mb-5">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<a class="contact100-form-btn" href="https://www.credit-agricole.pl/klienci-indywidualni"
+							target="_blank">
+							<span>
+								На сайт
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<hr class="my-4">
+
+				<div class="contact100-form validate-form mb-1">
+					<span class="contact100-form-title">
+						Bank Pocztowy
+						<br>
+						Рейтинг: 💶💶💶💶/5
+						<br>
+						Умови:
+					</span>
+
+					1️⃣внесення та зняття готівки в установах банку та відділеннях польської пошти<br>
+					2️⃣зовнішні перекази, які здійснюються з ROR через інтернет-банкінг/мобільний банкінг/телефонний
+					банкінг-IVR<br>
+					3️⃣зняття грошей у банкоматах мережі PKO BP та Planet Cash<br>
+					4️⃣звільнення від оплати за адміністрування ROR для рахунків, що відкриваються в період 01.03 —
+					31.05.2022, термін звільнення від оплати — до 28.02.2023<br>
+					5️⃣повернення оплати, зробленої клієнтом за користування карткою, виданою до рахунків ROR,
+					переліченим
+					вище, термін звільнення від оплати – до 28.02.2023<br>
+					6️⃣рахунок для мікрофірм.
+				</div>
+
+				<div class="container-contact100-form-btn mb-5">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<a class="contact100-form-btn" href="https://www.pocztowy.pl/indywidualni/" target="_blank">
+							<span>
+								На сайт
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<hr class="my-4">
+
+				<div class="contact100-form validate-form mb-1">
+					<span class="contact100-form-title">
+						ING Bank Śląski
+						<br>
+						Рейтинг: 💶💶💶💶/5
+						<br>
+						Умови:
+					</span>
+					1️⃣безкоштовне ведення рахунку: рахунки Mobi/Direct/PRP<br>
+					2️⃣безкоштовні депозити/зняття готівки у філії: рахунки PRP/Comfort/Active<br>
+					3️⃣безкоштовне зняття грошей у банкоматах ING та Planet Cash у Польщі карткою BLIK та карткою в
+					межах
+					послуги Cashback: усі рахунки<br>
+					4️⃣безкоштовне зняття грошей з інших банкоматів у Польщі за допомогою картки: рахунки
+					Comfort/Active/PRP
+					з лімітом 5 безкоштовних/Mobi та Direct з лімітом однієї безкоштовної виплати протягом
+					розрахункового
+					періоду<br>
+					5️⃣безкоштовні виплати з інших банкоматів у Польщі через BLIK: рахунки Mobi do 26
+					r.ż./Komfort/Active/PRP з лімітом 5 безкоштовних/Mobi pow. 26 r.ż. та Direct з лімітом однієї
+					безкоштовної виплати протягом розрахункового періоду<br>
+					6️⃣безкоштовна видача картки: всі рахунки<br>
+					7️⃣безкоштовне щомісячне обслуговування картки: рахунки PRP/Active/Mobi do 26 r.ż./ для інших
+					рахунків
+					можливість уникнути оплати за картку, якщо клієнт здійснює безготівкові операції з карткою протягом
+					розрахункового періоду на не менше ніж 300 PLN (Mobi pow. 26 r ż./Direct pow. 26 r.ż.) або 200 PLN
+					(Direct 18-26 r.ż.)<br>
+					8️⃣безкоштовна активація та без щомісячної оплати за BLIK: усі рахунки.
+				</div>
+
+				<div class="container-contact100-form-btn mb-5">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<a class="contact100-form-btn" href="https://www.ing.pl/" target="_blank">
+							<span>
+								На сайт
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<hr class="my-4">
+
+				<div class="contact100-form validate-form mb-1">
+					<span class="contact100-form-title">
+						BNP Paribas
+						<br>
+						Рейтинг: 💶💶💶/5
+						<br>
+						Умови:
+					</span>
+					1️⃣Доступним є безкоштовне ведення рахунків Konto Otwarte na Ciebie у стандарті.<br>
+					2️⃣Скасовано оплату за перекази в Україну до кінця березня 2022 року: 0 PLN за грошові перекази в
+					Україну, 0 PLN за внесення та зняття готівки у відділеннях банку, 0 PLN за зняття готівки у
+					банкоматах,
+					розташованих у Польщі.<br>
+					3️⃣Безкоштовно можна зняти гроші у банкоматах у Польщі, а також внести та зняти готівку у касі до
+					кінця
+					березня.
+				</div>
+
+				<div class="container-contact100-form-btn mb-5">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<a class="contact100-form-btn" href="https://www.bnpparibas.pl/ua/ukrainian-info"
+							target="_blank">
+							<span>
+								На сайт
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<hr class="my-4">
+
+				<div class="contact100-form validate-form mb-1">
+					<span class="contact100-form-title">
+						Millennium
+						<br>
+						Рейтинг: 💶💶💶/5
+						<br>
+						Умови:
+					</span>
+					1️⃣Скасовано оплату за перекази в Україну.
+				</div>
+
+				<div class="container-contact100-form-btn mb-5">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<a class="contact100-form-btn" href="https://www.bankmillennium.pl/" target="_blank">
+							<span>
+								На сайт
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				submit: true
+			}
+		})
+	</script>
+</body>
+
+</html>
